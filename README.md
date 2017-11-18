@@ -1,5 +1,7 @@
 # node-clusterwork
 
+![Build Status](https://travis-ci.org/codebysd/node-clusterwork.svg?branch=master)
+
 Process arbitrary incoming data on multiple worker processes. This is a helper module that helps setup node's cluster feature for tasks other than network servers.
 
 ## Installation
