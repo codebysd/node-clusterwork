@@ -1,6 +1,9 @@
 # node-clusterwork
 
 ![Build Status](https://travis-ci.org/codebysd/node-clusterwork.svg?branch=master)
+[![npm downloads](https://img.shields.io/npm/dt/clusterwork.svg)](https://www.npmjs.com/package/clusterwork)
+[![Open issues](https://img.shields.io/github/issues/codebysd/node-clusterwork.svg)](https://github.com/codebysd/node-clusterwork/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/codebysd/node-clusterwork.svg)]()
 
 Process arbitrary incoming data on multiple worker processes. This is a helper module that helps setup node's cluster feature for tasks other than network servers.
 
