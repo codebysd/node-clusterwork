@@ -18,7 +18,7 @@ function producer(dispatch){
         const data = Math.random(); 
         console.info(`master process ${process.pid} sending ${data}`);
         dispatch(data);
-    },1000);
+    }, 1000);
 }
 
 function consumer(data){
@@ -28,3 +28,44 @@ function consumer(data){
 clusterwork.init(producer,consumer);
 ```
 
+When the above script is run, apart from the main (master) process, multiple worker processes, (1 per each CPU core), are automatically spawned. 
+
+Master process runs the consumer function that can use `dispatch()` to send data to worker processes. 
+
+The consumer function is invoked in a worker process to handle/process the dispatched data. Workers are selected in a cyclic fashion to evenly distribute processing load.
+
+The above example yields:
+
+```bash
+master process 14530 sending 0.5805814887272316
+worker process 14541 got 0.5805814887272316
+master process 14530 sending 0.3958888451685434
+worker process 14542 got 0.3958888451685434
+master process 14530 sending 0.1878265613269785
+worker process 14547 got 0.1878265613269785
+master process 14530 sending 0.2966814774610549
+worker process 14536 got 0.2966814774610549
+```
+
+## Usage
+
+The main script should call the `init()` function:
+
+```javascript
+clusterwork.init(producer, consumer, respawn);
+```
+The parameters are explained as follows:
+
+1. **`producer`** - Function called once in master process and is supposed to setup data processing. It receives a `dispatch` function that can be used to send data object to workers.
+
+2. **`consumer`** - Function called in worker process to handle data object.
+
+3. **`respawn`** - Optional boolean flag that auto spawns a new worker, if an existing worker terminates somehow.
+
+## Notes
+
+1. If all worker processes are terminated, the main process throws an error while trying to dispatch data.
+
+## Licence
+
+The source code is published under MIT licence.
