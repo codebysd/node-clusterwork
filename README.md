@@ -35,7 +35,7 @@ clusterwork.init(producer,consumer);
 
 When the above script is run, apart from the main (master) process, multiple worker processes, (1 per each CPU core), are automatically spawned. 
 
-Master process runs the consumer function that can use `dispatch()` to send data to worker processes. 
+Master process runs the producer function that can use `dispatch()` to send data to worker processes. 
 
 The consumer function is invoked in a worker process to handle/process the dispatched data. Workers are selected in a cyclic fashion to evenly distribute processing load.
 
