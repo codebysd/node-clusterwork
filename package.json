@@ -1,6 +1,6 @@
 {
   "name": "clusterwork",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Process arbitrary incoming data on multiple workers",
   "main": "index.js",
   "scripts": {
