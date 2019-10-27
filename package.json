@@ -4,7 +4,10 @@
   "description": "Process arbitrary incoming data on multiple workers",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "preversion": "npm test",
+    "postversion": "git push --follow-tags",
+    "release": "npm version -m \"Release version %s\""
   },
   "engines": {
     "node": ">=6.4.0"
