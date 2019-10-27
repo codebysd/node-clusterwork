@@ -7,6 +7,9 @@
 
 Process arbitrary incoming data on multiple worker processes. This is a helper module that helps setup node's cluster feature for tasks other than network servers.
 
+## Why?
+The built in [cluster module](https://nodejs.org/api/cluster.html#cluster_how_it_works) automatically spreads the requests among workers when the main usage is for a nodejs server. BUT there might be other scenarios where a server is not involved, rather work from any arbitrary source is to be distributed among workers for parallel processing on all CPU cores. This modules makes it easy to setup a worker cluster for such scenarios. 
+
 ## Installation
 
 ```bash
