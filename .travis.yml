@@ -14,4 +14,4 @@ deploy:
   on:
     branch: master
     tags: true
-condition: "$TRAVIS_TAG =~ ^(v\\d\\.\\d\\.\\d)(-\\w+)?$"
+    condition: "$TRAVIS_TAG =~ ^(v\\d\\.\\d\\.\\d)(-\\w+)?$"

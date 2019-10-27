@@ -1,6 +1,6 @@
 # node-clusterwork
 
-![Build Status](https://travis-ci.org/codebysd/node-clusterwork.svg?branch=master)
+[![Build Status](https://travis-ci.org/codebysd/node-clusterwork.svg?branch=master)](https://travis-ci.org/codebysd/node-clusterwork)
 [![npm downloads](https://img.shields.io/npm/dt/clusterwork.svg)](https://www.npmjs.com/package/clusterwork)
 [![Open issues](https://img.shields.io/github/issues/codebysd/node-clusterwork.svg)](https://github.com/codebysd/node-clusterwork/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/codebysd/node-clusterwork.svg)]()
